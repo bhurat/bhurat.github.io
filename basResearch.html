@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='./basResearch.css' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1>My Research</h1>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="./basHome.html">Home</a></li>
+		  <li><a href="./basResearch.html">Research</a></li>
+          <li><a href="./basOther.html">Other</a></li>
+          <li><a href="./basContact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <h2>Overview Of Empirical Wavelets Transforms</h2>
+        <p> In the world of machine learning, the more separated the data, the better. From the simplest of classification methods like k-nearest neighbor to the most complex like neural networks, the separation of data is the whole game. 
+		 At their core, wavelet transforms (and multi-resolution analysis generally) do just that.
+		Specifically, we are talking about separating image data by frequencies and orientations, often by partitioning the Fourier spectrum. 
+		</p>
+        <p> Empirical wavelet transforms are an adaptive extension to wavelet transforms. 
+		This means that they
+		a.) partition the Fourier spectrum adaptively aka differently depending on the image they are applied to and 
+		b.) mathematically defined and constructed similarly to wavelet transforms.
+		The latter is often overlooked, but is important, as it allows mathematicians to study empirical wavelets in terms of convergence, behavior, and the like. 
+		</p>
+        <p>My research is currently focused on 2D empirical wavelet transforms. Specifically, I have been interested on the development of new empirical wavelet transforms and on the imaging applications of existing ones.</p>
+		
+			
+		<h2>Empirical Watershed Wavelets Transforms</h2>
+        <p> As mentioned, one of the my primary research interests is in the development of new empirical wavelet transforms. As a reminder, empirical wavelet transforms adaptively partition the Fourier spectrum based on the image they are operating on.
+		In earlier work with the empirical wavelet transform, however, the shape that the partitioning could take was limited by its construction. As such, during my masters thesis I sought to propose a method of defining an empirical wavelet transform from an arbitrary partitioning of the 2D Fourier spectrum. 
+		
+		With this definition, we have much more flexibility for detecting and defining our partitioning. As part of my work, I proposed a method for detecting an appropriate partition by breaking the process down to two steps. First, we detect the AM-FM modes present in the spectrum (seen as peaks of sorts). 
+		Then, one defines a partitioning of the spectrum to try and separate these modes as much as possible. Details can be found in my thesis, seen here: 
+		</p>
+		
+		<h2>Applications in Computer Vision</h2>
+        <p> Since wavelet transforms separate image data by frequency and orientation, they have seen many uses in computer vision where frequency and orientation are important features to extract. 
+			Nowhere is that more true than in images that are heavy in textures. These images tend to show up often, such as in satellite imagery, microscopy imagery, and medical imagery (to name a few).
+			
+			Empirical wavelet transforms are still new, and their use in image applications is newer still, but they have shown promise in both unsupervised texture segmentation and supervised texture classification.
+			A particularly exciting note is a paper by Huang and Gilles that shows their use as the input to a neural network for texture classification, which results in huge improvements overall. 
+			
+			As of now, I have explored unsupervised segmentation using the empirical watershed wavelet transform using k-means, which outperformed other wavelet approaches. I also looked at supervised texture classification using other empirical wavelets (empirical curvelets option 1) to see how they performed using methods outside of deep learning. While the final results are of course lower, it has the benefit of training models at a fraction of the time while still outperforming more naive NN approaches for B/W images. 
+		</p>
+		
+		<h2>Applications in Image Reconstruction</h2>
+        <p> Another application of empirical wavelet transforms is in image deconvolution/deblurring. Wavelets have traditionally been used in this domain because in practice, they are sparse representations of the image (Sparse just means that the image data is well separated).
+		Empirical wavelet transforms have shown to be promising in this front. On top of this, one can define the algorithm in such a way that the empirical wavelet transform is linear, allowing for very fast algorithms such as primal-dual optimization to be used.
+		</p>
+		
+		<h2>Other Projects</h2>
+        <p> I have looked into other, smaller projects. These can be found here.
+		<ul>
+          <li>Total variation denoising with primal-dual optimization</li>
+		  <li>Level-set methods for boundary based segmentation</li>
+        </ul>
+		</p>
+      </div>
+    </div>
+	
+	
+     
+    <div class="footer">
+      <div class="container">
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
