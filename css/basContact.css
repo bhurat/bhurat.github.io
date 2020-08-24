@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  background: url(./Bridge.jpg) no-repeat center center; 
+  background: url(../Figures/Bridge.jpg) no-repeat center center; 
   background-size: cover;
   height: 500px;
   text-align: center; 
