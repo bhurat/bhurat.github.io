@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='./css/basProjects.css' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1>Projects</h1>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+		  <li><a href="./basProjects.html">Projects</a></li>
+		  <li><a href="./basResearch.html">Research</a></li>
+          <li><a href="./basOther.html">Other</a></li>
+          <li><a href="./basContact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+	
+	<div class="main">
+      <div class="container">
+		<h2>Semantic Texture Classification with Fully Convolutional Networks and Empirical Wavelet Transforms</h2>
+        <p> Semantic texture classification is a known challenge for deep learning architectures. 
+		While some architectures have been proposed that show some success, they tend to under-perform in grayscale datasets, suggesting that these networks learn color rather than texture itself.
+		However, a recent paper used the empirical wavelet transform as a preprocessor and fed that into the neural network. 
+		I was curious about the effectiveness of such an approach, and so I recreated it somewhat in a collection of notebooks, found in the links below.
+		</p>
+		
+		<b>Links: </b>
+		<ul>
+          <li><a href="https://github.com/bhurat/Semantic-Texture-Classification-FCNT/blob/main/NN-%20Supervised%20Texture%20-%201.ipynb">1. Preparing The Data </a></li>
+		  <li> <a href="https://github.com/bhurat/Semantic-Texture-Classification-FCNT/blob/main/NN-%20Supervised%20Texture%20-%202%20FCNT.ipynb"> 2. Using The Fully Convolutional Network for Textures </a></li></li>
+		  <li> <a href="https://github.com/bhurat/Semantic-Texture-Classification-FCNT/blob/main/NN-%20Supervised%20Texture%20-%203%20Curvelets.ipynb">3. Combining FCNT with Empirical Curvelets</a></li></li>
+        </ul>
+		<p> In these notebooks, the FCNT was trained on 900 images, while the FCNT+Empirical Curvelets was trained on only 600. Despite that, I achieved slightly improved performance combining the FCNT and Empirical Curvelets. Images of example classifications can be found below.
+		</p>
+		<div class="grid-container">
+			<div class="imgcontainer">
+				 <img src="./Figures/FCNT_Supervised/OrigTextures.png" alt="Input Image" class="image">
+				 <div class="overlay">
+					<div class="text">Input Image</div>
+				 </div>
+			</div>
+			<div class="imgcontainer">
+				 <img src="./Figures/FCNT_Supervised/GT.png" alt="Ground Truth" class="image">
+				 <div class="overlay">
+					<div class="text">Ground Truth</div>
+				 </div>
+			</div>
+			<div class="imgcontainer">
+				 <img src="./Figures/FCNT_Supervised/FCNT.png" alt="FCNT Result" class="image">
+				 <div class="overlay">
+					<div class="text">FCNT Result</div>
+				 </div>
+			</div>
+			<div class="imgcontainer">
+				 <img src="./Figures/FCNT_Supervised/FCNTCurvelet.png" alt="FCNT+Empirical Curvelet Result" class="image">
+				 <div class="overlay">
+					<div class="text">FCNT+Empirical Curvelet Result</div>
+				 </div>
+			</div>
+		</div>
+		</div>
+    </div>
+    
+		
+	<div class="main">
+      <div class="container">
+		<h2>Empirical Watershed Wavelet Transform Applications In Image Deconvolution/Denoising</h2>
+        <p> Another application of traditional wavelet transforms is in image deconvolution/deblurring. Wavelets have traditionally been used in this domain because in practice, they are sparse representations of the image.
+		Empirical wavelet transforms have shown to be somewhat promising in this front. 
+		On top of this, one can define the algorithm in such a way that the empirical wavelet transform is linear, allowing for very fast algorithms such as primal-dual optimization to be used.
+		The results of this project will hopefully be published soon, but the empirical watershed wavelet transform outperformed all wavelet-based deconvolution approaches we compared it to. 
+		</p>
+		<b>Links: </b>
+		<ul>
+          <li>(Paper and code for Primal-Dual Deconvolution in progress)</li> 
+        </ul>
+      </div>
+    </div>
+	<div class="main">
+      <div class="container">
+		<h2>Empirical Wavelet Transform Package In Python</h2>
+        <p> I coded an empirical wavelet transform package in python that is based on the existing MATLAB package. It allows for 1D and 2Dempirical wavelet transforms. 
+		In 2D, there are multiple approaches and I have included tensor empirical wavelets,  empirical curvelets (options 1, 2, and 3), Littlewood-Paley empirical wavelets, and empirical ridgelets. 
+		</p>
+		<b>Links: </b>
+		<ul>
+		  <li><a href="https://github.com/bhurat/EWT-Python">EWT Package in Python (By me)</a></li>
+		  <li><a href="http://www.mathworks.com/matlabcentral/fileexchange/42141-empirical-wavelet-transforms">EWT Package in MATLAB (By J.Gilles)</a></li>
+        </ul>
+      </div>
+    </div>
+	<div class="main">
+      <div class="container">
+		<h2>Semantic Texture Classification Using Traditional Machine Learning and Empirical Wavelet Transforms (School project)</h2>
+        <p> Wavelet transforms have long been used as features for capturing textures, as textures contain multi-scale information. 
+		Since empirical wavelet transforms are still new, and their use in image applications is newer still, I was curious how they performed in a supervised semantic texture classification. 
+		This brings its own set of challenges, as we must merge the adaptive results of multiple images. 
+		
+		</p>
+		<b>Links: </b>
+		<ul>
+          <li> <a href="./Research/ComputerVisionProject.pdf"> Review of supervised texture classification with traditional machine learning (school project)</a></li></li>
+		</ul>
+		</div>
+    </div>
+	
+	<div class="main">
+      <div class="container">
+		<h2>Other Projects</h2>
+        <p> I have worked on other, smaller projects during my studies. 
+		<ul>
+          <li>Total variation denoising with primal-dual optimization</li>
+		  <li>Level-set methods for boundary based segmentation</li>
+        </ul>
+		</p>
+      </div>
+    </div>
+	
+	
+     
+    <div class="footer">
+      <div class="container">
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

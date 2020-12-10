@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  background: url(../Figures/Tree.jpg) no-repeat center center; 
+  background: url(../Figures/Rocks.jpg) no-repeat center center; 
   background-size: cover;
   height: 500px;
   text-align: center; 
@@ -100,6 +100,10 @@ body {
   margin: 80px auto;
 }
 
+.main img {
+  float: left;
+  margin: 50px 80px 50px 0;
+}
 .main a {
 color: #000;
   font-weight: bold;
@@ -107,16 +111,9 @@ color: #000;
   transition: background .5s; 
   text-decoration: none;
 }
-.grid-container1 {
+.grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-}
-.grid-container2 {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-}
-.main .imgcontainer img {
-  max-width: image%;
+  grid-template-columns: auto auto auto auto;
 }
 .image {
   display: block;
